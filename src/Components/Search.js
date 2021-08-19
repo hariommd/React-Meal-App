@@ -27,7 +27,7 @@ function Search(props) {
   }, [query]);
 
   return (
-    <div className="pt-4">
+    <div>
         { mealData && mealData!==undefined ? ( <div className={"searchList"}>
             {mealData.map((item,index)=>{
                return <MealItem key={index} data={item} />

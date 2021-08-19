@@ -1,3 +1,25 @@
+.navbar-nav{
+  width: 100%;
+  justify-content: space-between !important;
+}
+.nav-link{
+  font-size: 1.2rem;
+  color: #fff !important;
+}
+.navbar-brand span{
+  display: inline-block;
+  color: #fff;
+  background: #000;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border-radius: 50px;
+}
+.nav-link{
+  margin: 0 20px;
+}
+.nav-item:last-child{
+  margin-left: auto !important;
+}
 .home-content{
   color: #fff;
 }
@@ -6,9 +28,15 @@
   padding: 10px;
   transform: scale(0.9);
   color: #000;
-  
+  min-height: 375px;
 }
-.searchList a{
+.mealItem .card-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a{
+  display: inline-block;
   text-decoration: none;
 }
 .mealItem:hover{
@@ -47,14 +75,49 @@
 }
 .home-content{
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
 }
-.home-content .btn{
-  margin:40px 20px;
-  min-width: 160px;
+.home-content .categoryItem{
+  display: flex;
+  flex-direction: column;
+  max-width: 18rem;
+  margin: 10px 15px;
+  padding: 15px 20px;
+  border: 1px solid #000;
 }
+.categoryItem .imgWrapper{
+  margin: 10px 0;
+}
+.categoryItem p {
+  max-height: 10rem;
+  overflow-y: auto;
+}
+
+.categoryItem p::-webkit-scrollbar{
+  width: 10px;
+}
+.categoryItem p::-webkit-scrollbar-track{
+ background: #6c757d; 
+ border-radius: 30px;
+}
+.categoryItem p::-webkit-scrollbar-thumb{
+  background: #6c757d;
+  border-radius: 30px;
+}
+
+.categoryItem .btn{
+  margin-top: auto;
+}
+
+.categoryItem:hover p::-webkit-scrollbar-track{
+  background: #808080;
+}
+.categoryItem:hover p::-webkit-scrollbar-thumb{
+  background: #0dcaf0;
+}
+
+
 .instructionWrapper{
   display: flex;
   flex-direction: column;
@@ -64,4 +127,43 @@
 }
 .instructionWrapper p{
   text-align: justify;
+}
+
+.contactPage{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contactPage .spinnerWrapper{
+  display: flex;
+}
+.contactPage .spinner{
+  display: block;
+  height: 30px;
+  margin: 0 3px;
+  width: 30px;
+  background: rgba(0, 0, 0, 0.486);
+  border-radius: 50%;
+  animation: spinnerMover 4s linear infinite forwards ;
+}
+
+
+@keyframes spinnerMover {
+  0%{
+    transform: translateX(-150px);
+  }
+  25%{
+    transform: translateX(150px);
+  }
+  50%{
+    transform: translate(150px,80px);
+  }
+  75%{
+    transform: translate(-150px,80px);
+  }
+  100%{
+    transform: translate(-150px,0px);
+  }
 }
