@@ -167,3 +167,26 @@ a{
     transform: translate(-150px,0px);
   }
 }
+
+@media screen and (max-width:767px){
+  .mealDetails{
+    flex-direction: column;
+  }
+  .mealDetails > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .mealDetails .imgWrapper{
+    width: 80%;
+  }
+  .mealDetails .ingredientWrapper{
+    justify-content: center;
+    
+  }
+  .mealDetails .instructionWrapper{
+    padding: 5px 20px;
+  }
+
+}
